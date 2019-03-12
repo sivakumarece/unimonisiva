@@ -1,0 +1,38 @@
+
+<html>
+    <head>
+    <style>
+        table,th.td{
+            border: 1px solid black;
+
+        }
+        </style>
+    <body>
+<br><br>
+        <table id = "table">
+
+        </table>
+
+            <script>
+                alert("inside table creattion");
+                var table = document.getElementById("table");
+                for(var i = 1; i<11;i++){
+                    var tr = document.createElement("TR");
+                    console.log(tr);
+                    table.appendChild(tr);
+                    for(var j = 1; j<11;j++){
+                        var td = document.createElement("TD");
+                        console.log(td);
+                        td.setAttribute("id", (i-1)*10+j);
+                        var t = document.createTextNode((i-1)*10+j);
+                        console.log(t);
+                        td.appendChild(t);
+                        tr.appendChild(td)
+                    }
+                }
+                
+
+            </script>
+    </body>
+</html>
+
